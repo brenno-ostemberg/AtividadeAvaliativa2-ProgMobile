@@ -10,7 +10,7 @@ import androidx.room.Index;
 )
 public class Jogador {
 
-    @PrimaryKey(autoIncrement = true)
+    @PrimaryKey(autoGenerate = true)
     public int idJogador;
 
     @ColumnInfo(name = "nome")
