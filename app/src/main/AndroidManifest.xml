@@ -12,15 +12,41 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AtividadeAvaliativa2ProgMobile"
         tools:targetApi="31">
-        <activity
-            android:name=".MainActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+        <activity
+            android:name=".utils.MainActivity"
+            android:exported="true"> <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
         </activity>
+
+        <activity android:name=".ui.activity.ListaJogadoresActivity"
+            android:exported="false"
+            android:parentActivityName=".utils.MainActivity"
+            android:label="Lista de Jogadores">
+        </activity>
+
+        <activity android:name=".ui.activity.FormularioJogadorActivity"
+            android:exported="false"
+            android:parentActivityName=".ui.activity.ListaJogadoresActivity"> <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.activity.ListaJogadoresActivity"/>
+        </activity>
+
+        <activity
+            android:name=".ui.activity.ListaPartidasActivity"
+            android:exported="false"
+            android:label="Lista de Partidas"
+            android:parentActivityName=".utils.MainActivity"> </activity>
+
+        <activity
+            android:name=".ui.activity.FormularioPartidaActivity"
+            android:exported="false"
+            android:label="Formulário de Partida"
+            android:parentActivityName=".ui.activity.ListaPartidasActivity">
+        </activity>
+
     </application>
 
 </manifest>

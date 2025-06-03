@@ -25,5 +25,50 @@ public class Jogador {
     @ColumnInfo(name = "dataNascimento")
     public String dataNascimento;
 
+    //mudei desde aqui, criei um construtor e getters e setters
+    //mudei hj 29/5, deixei o construtor sem paramentros pq tive erros posteriores
+    public Jogador() {
+    }
+
+    public int getIdJogador() {
+        return idJogador;
+    }
+
+    public void setIdJogador(int idJogador) {
+        this.idJogador = idJogador;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getNickname() {
+        return nickname;
+    }
+
+    public void setNickname(String nickname) {
+        this.nickname = nickname;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getDataNascimento() {
+        return dataNascimento;
+    }
+
+    public void setDataNascimento(String dataNascimento) {
+        this.dataNascimento = dataNascimento;
+    }
 }
+
 

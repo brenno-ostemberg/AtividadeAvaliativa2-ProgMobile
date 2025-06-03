@@ -26,4 +26,6 @@ public interface PartidaDao {
     @Query("SELECT * FROM Partida WHERE idJogador1 = :idJogador OR idJogador2 = :idJogador")
     List<Partida> encontrarPartidasPeloIdJogador(int idJogador);
 
+    @Query("SELECT * FROM Partida") // Add this annotation
+    List<Partida> getAllPartidas();
 }

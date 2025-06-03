@@ -32,4 +32,10 @@ public interface JogadorDao {
     @Insert
     long insereJogadorEPegaId(Jogador jogador);
 
+    @Query("SELECT * FROM Jogador")
+    List<Jogador> getAllJogadores();
+
+    @Query("SELECT * FROM Jogador WHERE idJogador = :id")
+    Jogador getJogadorById(int id);
+
 }
